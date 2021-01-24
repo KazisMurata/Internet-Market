@@ -14,7 +14,7 @@ export const loadMoreLights = async ({offset}:any) => {
 
 export const fetchLightById = async (id: any) => {
     return new Promise((resolve, reject) => {
-        const light = lights.find((item) => item.id = id);
+        const light = lights.find((item) => item.id === id);
         resolve(light);
     })
 }

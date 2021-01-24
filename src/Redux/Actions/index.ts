@@ -7,7 +7,9 @@ import {
     LOAD_MORE_LIGHTS_FAILURE,
     FETCH_LIGHT_BY_ID_START,
     FETCH_LIGHT_BY_ID_SUCCESS,
-    FETCH_LIGHT_BY_ID_FAILURE
+    FETCH_LIGHT_BY_ID_FAILURE,
+    ADD_LIGHT_TO_BASKET,
+    SEARCH_LIGHT
 } from '../../Constants/Type';
 import {
     fetchLights as fetchLightsApi,
@@ -76,4 +78,18 @@ export const fetchLightById = (id: number)=> async (dispatch: any) => {
             error: true
         })
     };
+}
+
+export const addLightToBasket = (id: any) => (dispatch: any) => {
+    dispatch({
+        type: ADD_LIGHT_TO_BASKET,
+        payload: id
+    })
+}
+
+export const searchLight = (text: string) => (dispatch: any) => {
+    dispatch({
+        type: SEARCH_LIGHT,
+        payload: text
+    })
 }

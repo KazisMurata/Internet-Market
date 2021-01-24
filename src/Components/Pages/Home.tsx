@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchLights, loadMoreLights } from '../../Redux/Actions/index';
+import { fetchLights, loadMoreLights, addLightToBasket } from '../../Redux/Actions/index';
 import Layout from '../Common/Layout';
 import { getLights } from '../Common/Selectors';
 
@@ -9,7 +9,8 @@ import { getLights } from '../Common/Selectors';
 interface IProps {
     fetchLights: any,
     lights: any,
-    loadMoreLights: any
+    loadMoreLights: any,
+    addLightToBasket: any
 }
 
 class Home extends React.Component<IProps> {
@@ -19,6 +20,7 @@ class Home extends React.Component<IProps> {
 
     renderLights(light: any, index: any) {
         const shortDescription = `${light.description.slice(0, 60)}...`;
+        const { addLightToBasket } = this.props;
 
         return (
             <div className='col-sm-4 col-lg-4 col-md-4 book-list' key={index}>
@@ -37,7 +39,7 @@ class Home extends React.Component<IProps> {
                         </h4>
                         <p>{shortDescription}</p>
                         <p className='itemButton'>
-                            <button className='btn btn-primary'>
+                            <button className='btn btn-primary' onClick={() => addLightToBasket(light.id)}>
                                 Buy now!
                             </button>
                             <Link to={`/lights/${light.id}`} className='btn btn-default'>
@@ -76,7 +78,8 @@ const mapStateToProps = (state: any) => ({
 
 const mapDispatchToProps = {
     fetchLights,
-    loadMoreLights
+    loadMoreLights,
+    addLightToBasket
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
