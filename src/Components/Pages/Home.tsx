@@ -1,7 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchLights, loadMoreLights, addLightToBasket } from '../../Redux/Actions/index';
+import { 
+    fetchLights,
+    loadMoreLights,
+    addLightToBasket,
+    fetchCategories
+} from '../../Redux/Actions/index';
 import Layout from '../Common/Layout';
 import { getLights } from '../Common/Selectors';
 
@@ -10,12 +15,14 @@ interface IProps {
     fetchLights: any,
     lights: any,
     loadMoreLights: any,
-    addLightToBasket: any
+    addLightToBasket: any,
+    fetchCategories: Function
 }
 
 class Home extends React.Component<IProps> {
     componentDidMount() {
         this.props.fetchLights();
+        this.props.fetchCategories();
     }
 
     renderLights(light: any, index: any) {
@@ -72,14 +79,15 @@ class Home extends React.Component<IProps> {
     }
 };
 
-const mapStateToProps = (state: any) => ({
-    lights: getLights(state)
+const mapStateToProps = (state: any, ownProps: any) => ({
+    lights: getLights(state, ownProps)
 })
 
 const mapDispatchToProps = {
     fetchLights,
     loadMoreLights,
-    addLightToBasket
+    addLightToBasket,
+    fetchCategories
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
