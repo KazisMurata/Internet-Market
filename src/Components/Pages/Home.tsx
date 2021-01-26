@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { 
+import {
     fetchLights,
     loadMoreLights,
     addLightToBasket,
@@ -9,6 +9,7 @@ import {
 } from '../../Redux/Actions/index';
 import Layout from '../Common/Layout';
 import { getLights } from '../Common/Selectors';
+import SimpleSlider from '../Common/SliderSlick';
 
 
 interface IProps {
