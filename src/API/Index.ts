@@ -2,13 +2,13 @@ import lights from './Lights.Mock';
 import categories from './Categories.Mock';
 
 export const fetchLights = async () => {
-    // return new Promise((resolve, reject) => {
-    //     resolve(lights);
-    // })
-    const response = await fetch('http://www.mocky.io/v2/5918bc6b120000701040dbec');
-    const json = await response.json();
+    return new Promise((resolve, reject) => {
+        resolve(lights);
+    })
+    // const response = await fetch('http://www.mocky.io/v2/5918bc6b120000701040dbec');
+    // const json = await response.json();
 
-    return json.phones;
+    // return json.phones;
 }
 
 export const loadMoreLights = async ({offset}:any) => {

@@ -2,29 +2,29 @@ export default [
     {
         id: '1',
         categoryId: '1',
-        name: 'Apple iPhone 5c',
+        name: 'Apple iPhone 12',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies lorem odio, at laoreet tellus sodales in. Nullam maximus eros ut tortor ultricies rutrum. Aliquam euismod lacus non est egesta',
         price: 823,
-        image: '/uploads/iphone5c-selection-hero-2013.png',
-        cpu: '1.3GHz Apple A5',
-        camera: '8mp (3264x2448)',
+        image: '/uploads/iphone12.jpg',
+        cpu: '1.3GHz Apple A13',
+        camera: '12mp (3264x2448)',
         size: '124.4mm x 59.2mm x 8.97mm (4.9 x 2.33 x 0.35)',
-        weight: '132 grams (4.7 ounces) with battery',
+        weight: '162 grams (4.7 ounces) with battery',
         display: '4.0 326 pixel density',
-        battery: '1480 mAh',
+        battery: '3480 mAh',
         memory: '16GB, 32GB and RAM 1 GB'
     },
     {
         id: '2',
         categoryId: '1',
-        name: 'Apple iPhone 6',
+        name: 'Apple iPhone 11',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies lorem odio, at laoreet tellus sodales in. Nullam maximus eros ut tortor ultricies rutrum. Aliquam euismod lacus non est egesta',
         price: 953,
-        image: '/uploads/51u6y9Rm8QL._SY300_.jpg',
-        cpu: '1.3GHz Apple A6',
-        camera: '8mp (3264x2448)',
+        image: '/uploads/iphone11.jpg',
+        cpu: '1.3GHz Apple A12',
+        camera: '11mp (3264x2448)',
         size: '124.4mm x 59.2mm x 8.97mm (4.9 x 2.33 x 0.35)',
         weight: '132 grams (4.7 ounces) with battery',
         display: '4.0 326 pixel density',
@@ -82,17 +82,17 @@ export default [
     {
         id: '6',
         categoryId: '2',
-        name: 'Samsung Galaxy S6',
+        name: 'Samsung Galaxy S21',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies lorem odio, at laoreet tellus sodales in. Nullam maximus eros ut tortor ultricies rutrum. Aliquam euismod lacus non est egesta',
         price: 674,
-        image: '/uploads/Agnes_Case_for_Samsung_Galaxy_S6_(1)__92643_thumb.jpg',
+        image: '/uploads/samsung21.png',
         cpu: '1.3GHz Exynos 9882',
-        camera: '8mp (3264x2448)',
+        camera: '16mp (3264x2448)',
         size: '124.4mm x 59.2mm x 8.97mm (4.9 x 2.33 x 0.35)',
-        weight: '132 grams (4.7 ounces) with battery',
+        weight: '152 grams (4.7 ounces) with battery',
         display: '4.0 326 pixel density',
-        battery: '1480 mAh',
+        battery: '4000 mAh',
         memory: '16GB, 32GB and RAM 1 GB'
     }
 ]
